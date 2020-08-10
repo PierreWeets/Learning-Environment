@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><title>markdown to HTML</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/markdown.css">
+</head>
+<body>
+<h1><a name="table-of-Contents"></a>Table of Contents</h1>
+<hr class="separation">
+<ul>
+    <li><a href="#table-of-Contents">Table of contents</a></li>
+    <li><a href="#blocs-de-code">Création et mise en évidence de blocs de code</a> 
+                <ul>    
+                    <li><a href="#blocs-de-code-clôturés">Blocs de code clôturés</a></li>
+                    <li><a href="#syntaxe">Mise en évidence de la syntaxe</a></li>
+                    <li><a href="#liste-langages">liste complète des langages supportés</a></li>
+                    <li><a href="#lectures-complémentaires">Lectures complémentaires</a></li>
+                </ul>    
+    </li>
+</ul>
+
+<p>retour au menu principal <a href="./index.html">(README)</a>.</p>
+
+<h1><a name="#blocs-de-code"></a>Création et mise en évidence de blocs de code</h1>
+<hr class="separation">
+<p>Partager des échantillons de code avec des blocs de code clôturés et activer la coloration syntaxique.</p>
+
+<h2><a name="#blocs-de-code-clôturés"></a>Blocs de code clôturés</h2>
+<hr class="separation">
+<p>Vous pouvez créer des blocs de code clôturés en plaçant des triplets ``` avant et
+ après le bloc de code. Nous vous recommandons de placer une ligne vierge avant et 
+ après les blocs de code pour faciliter la lecture du formatage brut.</p>
+ <br>
+
+<p>```</p>
+<p>function test() {</p>
+<p>&nbsp;console.log("notice the blank line before this function?");</p>
+<p>}</p>
+<p>```</p>
+
+<p>
+    <img alt="function test() {console.log('notice the blank line before this function?');}"
+     src="./ressources/fenced-code-block-rendered.png"> 
+</p>
+
+<h2><a name="syntaxe"></a> Mise en évidence de la syntaxe</h2>
+<hr class="separation">
+<p>Vous pouvez ajouter un identifiant de langue facultatif 
+    pour activer la mise en évidence de la syntaxe dans votre bloc de code clôturé.</p>
+
+<ul>
+    <li>Par exemple, pour mettre en évidence la syntaxe du code Ruby:</li>
+
+
+<p>```ruby</p>
+<p>require 'redcarpet'</p>
+<p>markdown = Redcarpet.new("Hello World!")</p>
+<p>puts markdown.to_html</p>
+<p>```</p>
+
+<p>
+    <img alt="require 'redcarpet' markdown = Redcarpet.new('Hello World!') puts markdown.to_html"
+     src="./ressources/Markdown-Ruby.png"> 
+</p>
+
+    <li>Pour Json</li>
+
+<p>```json</p>
+<p>{</p>
+<p>  "firstName": "John",</p>
+<p>  "lastName": "Smith",</p>
+<p>"age": 25</p>
+<p>}</p>
+<p>```</p>
+
+<p>
+    <img alt="{ &#34;firstName&#34;: &#34;John&#34;, &#34;lastName&#34;: &#34;Smith&#34;, &#34;age&#34;: 25}"
+     src="./ressources/Markdown-Json.png"> 
+</p>
+
+    <li>Pour Javascript</li>
+
+
+<p>```js</p> 
+<p>var add2 = function(number) {</p> 
+<p>return number + 2;</p> 
+<p>}</p> 
+<p>```</p> 
+
+<p>
+    <img alt="var add2 = function(number) { return number + 2; }"
+     src="./ressources/Markdown-javascript.png"> 
+</p>
+</ul>
+
+<p>Rem:Nous utilisons 'Linguist' pour effectuer la détection de la langue et sélectionner des grammaires tierces pour la coloration syntaxique. 
+</p>
+<p>Vous pouvez savoir quels mots clés sont valides dans le fichier YAML des langues.</p>
+
+
+<h2><a name="liste-langages"></a>liste complète des langages supportés</h2>
+<div class="example">
+Cucumber ('*.feature')<br>abap ('*.abap')<br>ada ('*.adb', '*.ads', '*.ada'
+<br>ahk ('*.ahk', '*.ahkl')<br>apacheconf ('.htaccess', 'apache.conf', 'apache2.conf')
+<br>applescript ('*.applescript')<br>as ('*.as')<br>as3 ('*.as')<br>asy ('*.asy')
+<br>bash ('*.sh', '*.ksh', '*.bash', '*.ebuild', '*.eclass')<br>bat ('*.bat', '*.cmd')
+<br>befunge ('*.befunge')<br>blitzmax ('*.bmx')<br>boo ('*.boo')<br>brainfuck ('*.bf', '*.b')
+<br>c ('*.c', '*.h')<br>cfm ('*.cfm', '*.cfml', '*.cfc')<br>cheetah ('*.tmpl', '*.spt')
+<br>cl ('*.cl', '*.lisp', '*.el')<br>clojure ('*.clj', '*.cljs')<br>cmake ('*.cmake', 'CMakeLists.txt')
+<br>coffeescript ('*.coffee')<br>console ('*.sh-session')<br>control ('control')
+<br>cpp ('*.cpp', '*.hpp', '*.c++', '*.h++', '*.cc', '*.hh', '*.cxx', '*.hxx', '*.pde')
+<br>csharp ('*.cs')<br>css ('*.css')<br>cython ('*.pyx', '*.pxd', '*.pxi')
+<br>d ('*.d', '*.di')<br>delphi ('*.pas')<br>diff ('*.diff', '*.patch')
+<br>dpatch ('*.dpatch', '*.darcspatch')<br>duel ('*.duel', '*.jbst')
+<br>dylan ('*.dylan', '*.dyl')<br>erb ('*.erb')<br>erl ('*.erl-sh')
+<br>erlang ('*.erl', '*.hrl')<br>evoque ('*.evoque')<br>factor ('*.factor')
+<br>felix ('*.flx', '*.flxh')<br>fortran ('*.f', '*.f90')<br>gas ('*.s', '*.S')
+<br>genshi ('*.kid')<br>glsl ('*.vert', '*.frag', '*.geo')<br>gnuplot ('*.plot', '*.plt')
+<br>go ('*.go')<br>groff ('*.(1234567)', '*.man')<br>haml ('*.haml')<br>haskell ('*.hs')
+<br>html ('*.html', '*.htm', '*.xhtml', '*.xslt')<br>hx ('*.hx')<br>hybris ('*.hy', '*.hyb')
+<br>ini ('*.ini', '*.cfg')<br>io ('*.io')<br>ioke ('*.ik')<br>irc ('*.weechatlog')
+<br>jade ('*.jade')<br>java ('*.java')<br>js ('*.js')<br>jsp ('*.jsp')<br>lhs ('*.lhs')
+<br>llvm ('*.ll')<br>logtalk ('*.lgt')<br>lua ('*.lua', '*.wlua')
+<br>make ('*.mak', 'Makefile', 'makefile', 'Makefile.*', 'GNUmakefile')
+<br>mako ('*.mao')<br>maql ('*.maql')<br>mason ('*.mhtml', '*.mc', '*.mi', 'autohandler', 'dhandler')
+<br>markdown ('*.md')<br>modelica ('*.mo')<br>modula2 ('*.def', '*.mod')<br>moocode ('*.moo')
+<br>mupad ('*.mu')<br>mxml ('*.mxml')<br>myghty ('*.myt', 'autodelegate')<br>nasm ('*.asm', '*.ASM')
+<br>newspeak ('*.ns2')<br>objdump ('*.objdump')<br>objectivec ('*.m')<br>objectivej ('*.j')
+<br>ocaml ('*.ml', '*.mli', '*.mll', '*.mly')<br>ooc ('*.ooc')<br>perl ('*.pl', '*.pm')
+<br>php ('*.php', '*.php(345)')<br>postscript ('*.ps', '*.eps')<br>pot ('*.pot', '*.po')
+<br>pov ('*.pov', '*.inc')<br>prolog ('*.prolog', '*.pro', '*.pl')<br>properties ('*.properties')
+<br>protobuf ('*.proto')<br>py3tb ('*.py3tb')<br>pytb ('*.pytb')
+<br>python ('*.py', '*.pyw', '*.sc', 'SConstruct', 'SConscript', '*.tac')
+<br>rb ('*.rb', '*.rbw', 'Rakefile', '*.rake', '*.gemspec', '*.rbx', '*.duby')
+<br>rconsole ('*.Rout')<br>rebol ('*.r', '*.r3')<br>redcode ('*.cw')<br>rhtml ('*.rhtml')
+<br>rst ('*.rst', '*.rest')<br>sass ('*.sass')<br>scala ('*.scala')<br>scaml ('*.scaml')
+<br>scheme ('*.scm')<br>scss ('*.scss')<br>smalltalk ('*.st')<br>smarty ('*.tpl')
+<br>sourceslist ('sources.list')<br>splus ('*.S', '*.R')<br>sql ('*.sql')<br>sqlite3 ('*.sqlite3-console')
+<br>squidconf ('squid.conf')<br>ssp ('*.ssp')<br>tcl ('*.tcl')<br>tcsh ('*.tcsh', '*.csh')
+<br>tex ('*.tex', '*.aux', '*.toc')<br>text ('*.txt')<br>v ('*.v', '*.sv')<br>vala ('*.vala', '*.vapi')
+<br>vbnet ('*.vb', '*.bas')<br>velocity ('*.vm', '*.fhtml')<br>vim ('*.vim', '.vimrc')
+<br>xml ('*.xml', '*.xsl', '*.rss', '*.xslt', '*.xsd', '*.wsdl')<br>xquery ('*.xqy', '*.xquery')
+<br>xslt ('*.xsl', '*.xslt')<br>yaml ('*.yaml', '*.yml')
+</div>
+
+<h2><a name="lectures-complémentaires"></a>Lectures complémentaires</h2>
+
+<ul>
+    <li><a target="_blank" href="https://github.github.com/gfm/">GitHub Flavored MarUtilisation du Markdown pour intégrer du code:<a></li><br>
+    <li><a target="_blank" href="https://help.github.com/en/articles/basic-writing-and-formatting-syntax">Basic writing and formatting syntax</a></li>
+</ul>
+
+<p><a href="./index.html">retour à Main</a></p>
+
+</body>
+</html>

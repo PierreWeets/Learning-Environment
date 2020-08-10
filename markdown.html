@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><title>markdown to HTML</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/markdown.css">
+</head>
+
+<body>
+<h1><a name="table-of-Contents"></a>Table of Contents</h1>
+<ul>
+    <li><a href="#table-of-Contents">Table of contents</a> - <a href="#Markdown">Qu'est-ce que Markdown?</a>
+        <ul>
+            <li><a href="#syntax">Syntax</a>
+                <ul>  
+                    <li><a href="#header">Header</a></li>
+                    <li><a href="#emphasis">Emphasis</a></li>
+                    <li><a href="#list">List</a>
+                        <ul>  
+                            <li><a href="#non-ordonné">Non ordonné</a></li>
+                            <li><a href="#ordonné">Ordonné</a></li>
+                        </ul> 
+                    </li>
+                    <li><a href="#image">Image</a></li>
+                    <li><a href="#liens">Liens</a></li>
+                    <li><a href="#blockquotes">Blockquotes</a></li>
+                    <li><a href="#code-en-ligne">Code en ligne</a></li>
+                </ul>  
+            </li> 
+            <li><a href="#tableau">Tableau</a></li> 
+            <li><a href="#listes-de-tâches">Listes de tâches</a>
+                <ul>  
+                    <li><a href="#lectures-complémentaires">Lectures complémentaires</a></li>
+                </ul> 
+            </li> 
+        </ul> 
+
+    </li>
+</ul>
+
+<p>retour au menu principal <a href="./index.html">(README)</a>.</p>
+
+<h3><a name="Markdown"></a>Qu'est-ce que Markdown?</h3>
+<ul>
+<li>Markdown est un langage de balisage léger avec une syntaxe de formatage<br> de texte brut.</li>
+
+<li>Cela signifie qu'en utilisant seulement quelques symboles supplémentaires<br> dans votre texte, Markdown vous aide à créer un document avec une structure explicite.</li>
+
+<li>Par exemple, en texte brut, rien n'indique quel texte est en <b>gras</b>,<br> en <i>italic</i> ou est un lien. 
+    Mais avec MarkDown, en utilisant un symbole de certaines<br> 
+    manières, vous pouvez.</li>
+</ul>
+<hr class="separation">
+<p>Ici une liste de <b>Syntax</b> ce que MarkDown peut faire:</p>
+
+<h2><a name="syntax"></a>Syntax</h2>
+<h3><a name="header"></a>Header</h3>
+<div class="example">
+<p>#headers is like &lt;h1&gt;headers&lt;/h1&gt;</p>
+<p>##headers is like &lt;h2&gt;headers&lt;/h2&gt;</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>####headers is like &lt;h6&gt;headers&lt;/h6&gt;</p>
+</div>
+<h3><a name="emphasis"></a>Emphasis</h3>
+
+<p><span class="example">*italic* ou _italic_</span>  <i>italic</i></p>
+<p><span class="example">**bold** ou __bold__</span>  <b>bold</b></p>
+<p>ou combiner les deux</p>
+<p><span class="example">_**comb**_ ou __*comb*__</span>  <i><b>comb</b></i></p>
+
+<h3><a name="list"></a>List</h3>
+    <h4><a name="non-ordonné"></a>Non ordonné</h4>
+    <div class="example">
+        <p>* un</p>
+        <p>* deux</p>
+        <p>* trois</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* un</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* deux</p>
+    </div>
+  
+        <ul>
+        <li>un</li>
+        <li>deux</li>
+        <li>trois</li>
+            <ul>
+            <li>un</li>
+            <li>deux</li>
+            </ul>
+        </ul>
+
+    <h4><a name="ordonné"></a>Ordonné</h4>
+    <div class="example">    
+        <p>1. un</p>
+        <p>1. deux</p>
+        <p>1. trois</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. un</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. deux</p>
+    </div>
+
+    <ol>
+        <li>un</li>
+        <li>deux</li>
+        <li>trois</li>
+            <ol>
+            <li>un</li>
+            <li>deux</li>
+            </ol>
+    </ol>
+
+<h3><a name="image"></a>Image</h3>
+<div class="example"> 
+    <div>![web Dev](./ressources/in-case-of-fire.jpg)</div>
+</div>
+<br>
+<img src="./ressources/in-case-of-fire.jpg">
+
+<h3><a name="liens"></a>Liens</h3>
+
+<p><a target="_blank" href="http://github.com">http://github.com</a> - automatic!</p>
+<p><a target="_blank" href="http://github.com">http://github.com</a></p>
+
+<h3><a name="blockquotes"></a>Blockquotes</h3>
+
+<div class="example">
+<p>c'est un texte de test</p>
+<p>>>encore une fois c'est un texte de test</p>
+</div>
+
+<p>&nbsp;c'est un texte de test</p>
+<p>&nbsp;&nbsp;encore une fois c'est un texte de test</p>
+
+<h3><a name="code-en-ligne"></a>Code en ligne</h3>
+
+<div class="example">
+<p>Je pense que vous devriez utiliser</p>
+<p>L'élément `&lt;a&gt;` ici à la place.</p>
+</div>
+<br>
+
+<p>Je pense que vous devriez utiliser l'élément <span class="example">`&lt;a&gt;`</span> ici à la place.</p>
+
+<h2><a name="tableau"></a>Tableau</h2>
+
+<div class="example">
+<p>&nbsp;\| titre1| titre2| titre3|\</p>
+<p>&nbsp;\|-------|:-----:|------:|\</p>
+<p>&nbsp;\| col 1 | col 2 | col 3 |\</p>
+<p>&nbsp;\| col 1 | col 2 | col 3 |\</p>
+<p>&nbsp;\| col 1 | col 2 | col 3 |</p>
+</div>
+<br>
+<table class="markdownTable">
+    <tr>
+        <th>titre1</th>
+        <th>titre2</th>
+        <th>titre3</th>
+    </tr>    
+    <tr class="markdownTable">
+        <td>col 1</td>
+        <td>col 2</td>
+        <td>col 3</td>
+    </tr>
+    <tr class="markdownTable">
+        <td>col 1</td>
+        <td>col 2</td>
+        <td>col 3</td>
+    </tr>
+    <tr class="markdownTable">
+        <td>col 1</td>
+        <td>col 2</td>
+        <td>col 3</td>
+    </tr>
+</table>
+
+<h2><a name="listes-de-tâches"></a>Listes de tâches</h2>
+
+<div class="example">
+<ul class="dashed">
+<li>[x] un</li>
+<li>[ ] deux</li>
+<li>[x] trois</li>
+</ul>
+</div>
+<br>
+
+<p><input type="checkbox" disabled="" checked=""> un </p>
+<p><input type="checkbox" disabled="" > deux </p>
+<p><input type="checkbox" disabled="" checked=""> trois </p>
+
+
+<h2><a name="lectures-complémentaires"></a>Lectures complémentaires</h2>
+
+<ul>
+<li><a target="_blank" href="https://github.github.com/gfm/">GitHub Flavored MarUtilisation du Markdown pour intégrer du code:<a></li><br>
+<li><a target="_blank" href="https://help.github.com/en/articles/basic-writing-and-formatting-syntax">Basic writing and formatting syntax</a></li>
+</ul>
+
+<p><a href="./index.html">retour à Main</a></p>
+</body>
+</html>
